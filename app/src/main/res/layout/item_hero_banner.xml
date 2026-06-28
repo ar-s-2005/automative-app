@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Dark Overlay to ensure readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000" />
+
+    <!-- Content over banner -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <!-- Luxury Accent Indicator -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="#D4AF37"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/bannerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="BMW M4 Competition"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bannerHp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="503 HP • Twin-Turbo Petrol"
+                android:textColor="@color/cyan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bannerPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="₹1.55Cr"
+                android:textColor="#D4AF37"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

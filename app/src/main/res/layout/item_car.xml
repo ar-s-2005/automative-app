@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="22dp"
+    app:cardBackgroundColor="@color/card_dark"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_luxury"
+        android:padding="16dp">
+
+        <!-- Car Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_car_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Vehicle Graphic"
+                    tools:src="@drawable/ic_launcher_background" />
+
+                <!-- Transparent Gradient overlay -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_brand_card"
+                    android:alpha="0.75" />
+
+                <!-- Quick info brand badge -->
+                <TextView
+                    android:id="@+id/tv_badge_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_gravity="top|start"
+                    android:background="@drawable/bg_search_bar"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="BMW"
+                    android:textColor="@color/gold"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- Wishlist Toggle (Glassmorphism circle) -->
+                <FrameLayout
+                    android:id="@+id/btn_wishlist"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="12dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/bg_search_bar">
+
+                    <ImageView
+                        android:id="@+id/iv_heart_icon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_research_nav"
+                        app:tint="@color/red"
+                        android:contentDescription="Add to Wishlist" />
+                </FrameLayout>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Brand and Model Name -->
+        <TextView
+            android:id="@+id/tv_car_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="M4 Competition"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tv_car_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_container" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tv_car_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹1.55Cr"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_car_model"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_car_model" />
+
+        <!-- Specs Horizontal Row -->
+        <LinearLayout
+            android:id="@+id/specs_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/tv_car_model">
+
+            <!-- Horsepower specification -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POWER"
+                    android:textColor="@color/gray_text"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_spec_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="503 HP"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Fuel specification -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FUEL TYPE"
+                    android:textColor="@color/gray_text"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_spec_fuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Petrol"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Mileage specification -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MILEAGE"
+                    android:textColor="@color/gray_text"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_spec_mileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.7 km/l"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Secondary Specs Row -->
+        <TextView
+            android:id="@+id/tv_engine_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Engine: 3.0L TwinPower Turbo Inline-6"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/specs_row" />
+
+        <!-- Bottom interactive row: Compare + Details Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_engine_desc">
+
+            <!-- Checkbox/Button to add to Compare -->
+            <FrameLayout
+                android:id="@+id/btn_compare_toggle"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_search_bar">
+
+                <TextView
+                    android:id="@+id/tv_compare_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="COMPARE"
+                    android:textColor="@color/cyan"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Buy Now / View Details Button -->
+            <FrameLayout
+                android:id="@+id/btn_buy_details"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_gradient_purple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="VIEW DETAIL"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

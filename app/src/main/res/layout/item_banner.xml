@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/card_dark"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/iv_banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="Hero Car Image" />
+
+        <!-- Cinematic Gradient Overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_brand_card"
+            android:alpha="0.85"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Specifications Badges / Info overlay -->
+        <TextView
+            android:id="@+id/tv_banner_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="Porsche 911 Turbo S"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_banner_price"
+            app:layout_constraintEnd_toStartOf="@id/hp_badge"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_banner_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="₹3.3Cr"
+            android:textColor="@color/gold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Horsepower Badge -->
+        <LinearLayout
+            android:id="@+id/hp_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_search_bar"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_research_nav"
+                app:tint="@color/cyan"
+                android:contentDescription="HP Icon" />
+
+            <TextView
+                android:id="@+id/tv_banner_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="640 HP"
+                android:textColor="@color/cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

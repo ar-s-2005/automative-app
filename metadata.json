@@ -1,0 +1,6 @@
+{
+  "name": "AutoMarket Hub",
+  "description": "Premium luxury automotive marketplace & research platform inspired by BMW, Audi, Mercedes-Benz, and Porsche.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">AutoMarket Hub</string>
+    <string name="title_home">Dashboard</string>
+    <string name="title_buy">Buy Cars</string>
+    <string name="title_sell">Sell Car</string>
+    <string name="title_research">Research</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_car_details">Car Details</string>
+    
+    <!-- Auth Strings -->
+    <string name="login_title">AutoMarket Hub</string>
+    <string name="login_subtitle">Luxury Starts Here</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Enter Hub</string>
+    <string name="signup_link">No Account? Join Elite</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Join the Premium Automotive Network</string>
+    <string name="name_hint">Full Name</string>
+    <string name="signup_button">Create Profile</string>
+    <string name="login_link">Already a Member? Sign In</string>
+    <string name="forgot_title">Reset Password</string>
+    <string name="forgot_subtitle">Enter your email to receive recovery instructions</string>
+    <string name="forgot_button">Send Reset Email</string>
+    <string name="back_to_login">Back to Sign In</string>
+
+    <!-- Search/Home -->
+    <string name="search_hint">Search BMW, Audi, Benz, Porsche...</string>
+    <string name="welcome_headline">Find Your Dream Machine</string>
+    
+    <!-- Sell Form -->
+    <string name="car_brand_hint">Car Brand (e.g. BMW)</string>
+    <string name="car_model_hint">Model (e.g. M4 Competition)</string>
+    <string name="car_year_hint">Year (e.g. 2024)</string>
+    <string name="car_price_hint">Price (e.g. 1.55 Cr)</string>
+    <string name="car_mileage_hint">Mileage (in km, e.g. 5000)</string>
+    <string name="car_fuel_hint">Fuel Type (Petrol, Diesel, EV, Hybrid)</string>
+    <string name="car_engine_hint">Engine Type (e.g. 3.0L Twin-Turbo L6)</string>
+    <string name="car_condition_hint">Car Condition (Excellent, Good, Fair)</string>
+    <string name="owner_name_hint">Owner Name</string>
+    <string name="owner_contact_hint">Contact Number</string>
+    <string name="owner_location_hint">Location (e.g. Mumbai)</string>
+    <string name="upload_image_btn">Select Car Image</string>
+    <string name="submit_listing_btn">Publish Listing</string>
+    
+    <!-- Navigation Descriptions -->
+    <string name="desc_logo">AutoMarket Hub Logo</string>
+    <string name="desc_profile">User Profile Icon</string>
+    <string name="desc_search">Search Button</string>
+    <string name="desc_voice">Voice Search Button</string>
+</resources>

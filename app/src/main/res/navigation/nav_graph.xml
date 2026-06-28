@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- 1. Home tab -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_details"
+            app:destination="@id/carDetailsFragment" />
+    </fragment>
+
+    <!-- 2. Buy tab -->
+    <fragment
+        android:id="@+id/navigation_buy"
+        android:name="com.example.fragments.BuyFragment"
+        android:label="Showroom"
+        tools:layout="@layout/fragment_buy">
+        <action
+            android:id="@+id/action_buy_to_details"
+            app:destination="@id/carDetailsFragment" />
+    </fragment>
+
+    <!-- 3. Sell tab -->
+    <fragment
+        android:id="@+id/navigation_sell"
+        android:name="com.example.fragments.SellFragment"
+        android:label="Sell"
+        tools:layout="@layout/fragment_sell" />
+
+    <!-- 4. Research tab -->
+    <fragment
+        android:id="@+id/navigation_research"
+        android:name="com.example.fragments.ResearchFragment"
+        android:label="Research"
+        tools:layout="@layout/fragment_research" />
+
+    <!-- 5. Profile/Itinerary tab -->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Secondary Fragment: Car Details -->
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="com.example.fragments.CarDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_car_details" />
+
+</navigation>

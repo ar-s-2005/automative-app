@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black">
+
+    <!-- Immersive Blurred Luxury Car Wallpaper Background -->
+    <ImageView
+        android:id="@+id/splashBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.25"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Dark Overlay Gradient -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000" />
+
+    <!-- Center Content -->
+    <LinearLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Glowing Logo Frame -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Glowing Ring Effect -->
+            <View
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:background="@drawable/glowing_circle" />
+
+            <!-- Core Symbol -->
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_sparkle"
+                android:contentDescription="@string/desc_logo" />
+
+        </FrameLayout>
+
+        <!-- Brand Headline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="AUTOMARKET HUB"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:letterSpacing="0.1"
+            android:textStyle="bold" />
+
+        <!-- Luxury Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Luxury Starts Here"
+            android:textColor="#D4AF37"
+            android:textSize="16sp"
+            android:letterSpacing="0.2" />
+
+    </LinearLayout>
+
+    <!-- Bottom Loading Bar -->
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:indeterminateTint="#D4AF37" />
+
+</FrameLayout>

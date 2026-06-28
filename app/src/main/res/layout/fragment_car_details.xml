@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header Image with overlay widgets -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
+
+            <ImageView
+                android:id="@+id/detailCarImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <!-- Shadow overlay -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bottom_shadow" />
+
+            <!-- Custom Navigation Toolbar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:paddingHorizontal="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnDetailBack"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="#80000000"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back" />
+
+                <ImageButton
+                    android:id="@+id/btnDetailWishlist"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="#80000000"
+                    android:src="@drawable/ic_heart_empty"
+                    android:contentDescription="Toggle Wishlist" />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!-- Main Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Brand and Model -->
+            <TextView
+                android:id="@+id/detailBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="PORSCHE"
+                android:textColor="#D4AF37"
+                android:textSize="12sp"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/detailModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="911 Turbo S"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <!-- Price Tag -->
+            <TextView
+                android:id="@+id/detailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-black"
+                android:text="₹3.30Cr"
+                android:textColor="@color/cyan"
+                android:textSize="22sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/divider_color" />
+
+            <!-- SPECIFICATION GRID -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="SPECIFICATIONS"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="2"
+                android:rowCount="4">
+
+                <!-- Power -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/card_dark"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Horsepower"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/gridHp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="640 HP"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Top Speed -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/card_dark"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Speed"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/gridSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="330 km/h"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Torque -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/card_dark"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Torque"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/gridTorque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="800 Nm"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Fuel Type -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/card_dark"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fuel Type"
+                        android:textColor="@color/gray_text"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/gridFuel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Petrol"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </GridLayout>
+
+            <!-- Other Details card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="#2C2C35"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/detailYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year: 2024"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/detailMileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Mileage: 1,200 km"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/detailEngine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Engine: 3.8L Flat-6 Twin-Turbo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/detailCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Condition: Mint"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/detailLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Location: Bangalore, KA"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- FINANCE / EMI CALCULATOR (Gold gradient highlight) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="FINANCE &amp; EMI CALCULATOR"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="#2C2C35"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Simulate premium interest rates for your auto loan."
+                        android:textColor="@color/gray_text"
+                        android:textSize="12sp" />
+
+                    <!-- Inputs row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <!-- Interest Rate -->
+                        <EditText
+                            android:id="@+id/etEmiInterest"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="4dp"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Rate (e.g. 7.5%)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="13sp" />
+
+                        <!-- Down Payment -->
+                        <EditText
+                            android:id="@+id/etEmiDown"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1.2"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Down Pay (e.g. 20L)"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <!-- Calculate Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCalculateEmi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Calculate Monthly Installment"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#D4AF37" />
+
+                    <!-- Output monthly emi -->
+                    <TextView
+                        android:id="@+id/tvEmiResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-black"
+                        android:text="EMI: ₹ --"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TEST DRIVE BOOKING -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="RESERVE TEST DRIVE"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="#2C2C35"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Dealer selector info -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verified Dealership: AutoMarket Hub Elite West"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Date & Time Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <!-- Date input picker simulator -->
+                        <EditText
+                            android:id="@+id/etBookingDate"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Date (DD/MM/YY)"
+                            android:gravity="center"
+                            android:focusable="false"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="13sp" />
+
+                        <!-- Time input picker -->
+                        <EditText
+                            android:id="@+id/etBookingTime"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:background="@drawable/edittext_border"
+                            android:hint="Time (e.g. 2:00 PM)"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <!-- Reserve Now CTA -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBookTestDrive"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Confirm Booking Reservation"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/purple"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Seller Information Details -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="OWNERSHIP &amp; VERIFICATION"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/card_dark"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="#2C2C35"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detailOwnerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AutoMarket Elite"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/detailContactNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="monospace"
+                            android:text="+1 555-Luxury"
+                            android:textColor="@color/gray_text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallSeller"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="Call Seller"
+                        app:icon="@android:drawable/stat_sys_phone_call"
+                        app:iconTint="@color/cyan" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

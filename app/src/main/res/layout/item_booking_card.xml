@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    android:background="@drawable/bg_card_luxury"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_booking_model"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="BMW M4 Competition"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tv_booking_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_booking_dealer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:text="Elite Hub Central Showroom"
+        android:textColor="@color/gray_text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_booking_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_booking_model" />
+
+    <TextView
+        android:id="@+id/tv_booking_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Date: 12-07-2026  |  Time: 11:30 AM"
+        android:textColor="@color/gold"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_booking_dealer" />
+
+    <TextView
+        android:id="@+id/tv_booking_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_bar"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="CONFIRMED"
+        android:textColor="@color/cyan"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

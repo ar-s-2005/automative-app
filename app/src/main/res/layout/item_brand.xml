@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="110dp"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brand_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_brand_card"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_brand_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Brand Logo" />
+
+        <TextView
+            android:id="@+id/tv_brand_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="BMW"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_brand_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

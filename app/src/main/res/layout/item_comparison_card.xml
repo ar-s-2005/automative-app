@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#2C2C35"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_dark"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/compImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/removeBtn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="4dp"
+                android:background="#80000000"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:contentDescription="Remove" />
+
+        </RelativeLayout>
+
+        <!-- Brand / Model -->
+        <TextView
+            android:id="@+id/compBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="PORSCHE"
+            android:textColor="#D4AF37"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/compModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="911 Turbo S"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/compPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="₹3.3Cr"
+            android:textColor="@color/cyan"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/divider_color" />
+
+        <!-- Details list -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="640 HP"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Top Speed"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="330 km/h"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Torque"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compTorque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="800 Nm"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Engine"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compEngine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="3.8L Flat-6"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Fuel Type"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petrol"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Year"
+            android:textColor="@color/gray_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/compYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

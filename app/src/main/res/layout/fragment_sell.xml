@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="SELL YOUR MACHINE"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Reach elite buyers in our verified network."
+            android:textColor="@color/cyan"
+            android:textSize="13sp" />
+
+        <!-- Form Fields Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/card_dark"
+            app:cardCornerRadius="24dp"
+            app:strokeColor="#2C2C35"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Brand -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/car_brand_hint"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Model -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/car_model_hint"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Year and Price Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <!-- Year -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:textColorHint="@color/gray_text"
+                        app:boxStrokeColor="@color/cyan"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:hintTextColor="@color/cyan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSellYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/car_year_hint"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Price -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:layout_marginStart="6dp"
+                        android:textColorHint="@color/gray_text"
+                        app:boxStrokeColor="@color/cyan"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:hintTextColor="@color/cyan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSellPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/car_price_hint"
+                            android:inputType="text"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Mileage and Fuel -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <!-- Mileage -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:textColorHint="@color/gray_text"
+                        app:boxStrokeColor="@color/cyan"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:hintTextColor="@color/cyan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSellMileage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/car_mileage_hint"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Fuel Type -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:textColorHint="@color/gray_text"
+                        app:boxStrokeColor="@color/cyan"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:hintTextColor="@color/cyan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSellFuel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/car_fuel_hint"
+                            android:inputType="textCapWords"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Engine Type -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellEngine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/car_engine_hint"
+                        android:inputType="text"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Car Condition -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/car_condition_hint"
+                        android:inputType="text"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Image URL Link -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Image URL (Unsplash or direct)"
+                        android:inputType="textUri"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Seller Info Header -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="SELLER CONTACT"
+                    android:textColor="@color/gray_text"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.1" />
+
+                <!-- Owner Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/owner_name_hint"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Contact Number -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/owner_contact_hint"
+                        android:inputType="phone"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Location -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColorHint="@color/gray_text"
+                    app:boxStrokeColor="@color/cyan"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="@color/cyan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSellLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/owner_location_hint"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Submit Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPublishListing"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/submit_listing_btn"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/cyan"
+                    app:cornerRadius="16dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back and Title Header -->
+        <FrameLayout
+            android:id="@+id/btn_back_compare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_search_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:rotation="180"
+                android:src="@drawable/ic_research_nav"
+                app:tint="@color/white"
+                android:contentDescription="Back Navigation" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="COMPARISON MATRIX"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back_compare"
+            app:layout_constraintStart_toEndOf="@id/btn_back_compare"
+            app:layout_constraintTop_toTopOf="@id/btn_back_compare" />
+
+        <TextView
+            android:id="@+id/btn_clear_compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:textColor="@color/cyan"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back_compare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_back_compare" />
+
+        <!-- Grid Table Container -->
+        <TableLayout
+            android:id="@+id/table_compare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="0,1,2"
+            app:layout_constraintTop_toBottomOf="@id/btn_back_compare">
+
+            <!-- Car Images Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/card_dark">
+                    <ImageView
+                        android:id="@+id/iv_car1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Car 1" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/card_dark">
+                    <ImageView
+                        android:id="@+id/iv_car2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Car 2" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/card_dark">
+                    <ImageView
+                        android:id="@+id/iv_car3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Car 3" />
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <!-- Name Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <TextView
+                    android:id="@+id/tv_name1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_name3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1.5dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Price Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="PRICE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_price1" android:layout_marginTop="2dp" android:textColor="@color/gold" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="PRICE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_price2" android:layout_marginTop="2dp" android:textColor="@color/gold" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="PRICE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_price3" android:layout_marginTop="2dp" android:textColor="@color/gold" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Power Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="POWER" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_power1" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="POWER" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_power2" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="POWER" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_power3" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Torque Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TORQUE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_torque1" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TORQUE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_torque2" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TORQUE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_torque3" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Top Speed Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TOP SPEED" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_speed1" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TOP SPEED" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_speed2" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="TOP SPEED" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_speed3" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Engine Capacity -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="ENGINE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_engine1" android:layout_marginTop="2dp" android:textColor="@color/white" android:gravity="center" android:textSize="11sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="ENGINE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_engine2" android:layout_marginTop="2dp" android:textColor="@color/white" android:gravity="center" android:textSize="11sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="ENGINE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_engine3" android:layout_marginTop="2dp" android:textColor="@color/white" android:gravity="center" android:textSize="11sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Fuel Type Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="FUEL" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_fuel1" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="FUEL" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_fuel2" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="FUEL" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_fuel3" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Divider -->
+            <View android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginVertical="6dp"/>
+
+            <!-- Mileage Row -->
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="MILEAGE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_mileage1" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="MILEAGE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_mileage2" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="0dp" android:layout_weight="1">
+                    <TextView android:text="MILEAGE" android:textColor="@color/gray_text" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tv_mileage3" android:layout_marginTop="2dp" android:textColor="@color/white" android:textStyle="bold" android:textSize="12sp"/>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

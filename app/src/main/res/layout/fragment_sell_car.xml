@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="SELL YOUR MACHINE"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List your luxury vehicle in the elite showroom"
+            android:textColor="@color/gold"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <!-- Form Card Container -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/form_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_luxury"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle">
+
+            <TextView
+                android:id="@+id/tv_section_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Specifications"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Brand Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Car Brand (e.g. BMW, Porsche)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_section_details"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Model Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Model Name (e.g. 911 GT3)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_brand"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Year Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Year"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintEnd_toStartOf="@id/til_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_model"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Price Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:hint="Price (in Cr)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/til_year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/til_year"
+                app:layout_constraintTop_toTopOf="@id/til_year"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Mileage Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Mileage (e.g. 12 km/l)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_year"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mileage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fuel and Engine -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_fuel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Fuel Type"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintEnd_toStartOf="@id/til_engine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_mileage"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_fuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_engine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:hint="Engine Capacity"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/til_fuel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/til_fuel"
+                app:layout_constraintTop_toTopOf="@id/til_fuel"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Condition -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Car Condition (e.g. Mint, Excellent)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_fuel"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Image URL -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_image_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Premium Image Link (Optional)"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_condition"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_image_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textUri" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_section_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Contact Credentials"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_image_url" />
+
+            <!-- Owner Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Owner Full Name"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_section_owner"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contact Number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Contact Number"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_owner"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Location -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Showroom Location / City"
+                app:hintTextColor="@color/gray_text"
+                app:boxStrokeColor="@color/cyan"
+                app:boxStrokeWidthFocused="2dp"
+                app:layout_constraintTop_toBottomOf="@id/til_contact"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Cyan Gradient Submit Button -->
+            <FrameLayout
+                android:id="@+id/btn_submit_container"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_gradient_cyan"
+                app:layout_constraintTop_toBottomOf="@id/til_location">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    app:backgroundTint="@android:color/transparent"
+                    android:text="SUBMIT LISTING"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/cyan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
